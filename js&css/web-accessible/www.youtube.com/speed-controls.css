@@ -1,0 +1,28 @@
+.ytp-speed-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.ytp-speed-controls button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 4px;
+    min-width: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ytp-speed-controls button:hover {
+    opacity: 0.8;
+}
+
+.ytp-speed-reset {
+    font-family: 'YouTube Noto', Roboto, Arial, sans-serif;
+    min-width: 32px !important;
+}
