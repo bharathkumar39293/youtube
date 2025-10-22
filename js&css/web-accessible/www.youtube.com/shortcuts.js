@@ -301,25 +301,25 @@ ImprovedTube.shortcutIncreaseVolume = function (decrease) {
 		return;
 	}
 
-	// universal, goes both ways if you know what I mean
-	if (decrease) {
-		player.setVolume(player.getVolume() - value);
+	// Get current volume, considering both native and boosted volume
+	let currentVolume;
+	if (this.audioContext) {
+		// If audio context exists, we're using volume boost
+		currentVolume = player.getVolume() * (this.audioContextGain.gain.value || 1);
 	} else {
-		player.setVolume(player.getVolume() + value);
+		currentVolume = player.getVolume();
 	}
 
-	localStorage['yt-player-volume'] = JSON.stringify({
-		data: JSON.stringify({
-			volume: player.getVolume(),
-			muted: player.isMuted(),
-			expiration: Date.now(),
-			creation: Date.now()
-		})
-	});
+	// Calculate new volume
+	let newVolume;
+	if (decrease) {
+		newVolume = currentVolume - value;
+	} else {
+		newVolume = currentVolume + value;
+	}
 
-	sessionStorage['yt-player-volume'] = localStorage['yt-player-volume'];
-
-	this.showStatus(player.getVolume());
+	// Use our volume setter that handles boosted volume
+	this.setAndShowVolume(newVolume);
 };
 /*------------------------------------------------------------------------------
 4.7.14 DECREASE VOLUME

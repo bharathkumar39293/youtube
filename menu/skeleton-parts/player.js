@@ -158,6 +158,11 @@ extension.skeleton.main.layers.section.player.on.click = {
 			max: 405,
 			value: 100
 		},
+		player_volume_boost: {
+			component: 'switch',
+			text: 'volumeBoost',
+			value: true
+		},
 		player_loudness_normalization: {
 			component: 'switch',
 			text: 'loudnessNormalization',

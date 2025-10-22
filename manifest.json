@@ -38,8 +38,7 @@
         "js&css/extension/www.youtube.com/appearance/player/player.css",
         "js&css/extension/www.youtube.com/appearance/details/details.css",
         "js&css/extension/www.youtube.com/appearance/sidebar/sidebar.css",
-        "js&css/extension/www.youtube.com/appearance/comments/comments.css",
-        "js&css/web-accessible/www.youtube.com/speed-controls.css"
+        "js&css/extension/www.youtube.com/appearance/comments/comments.css"
       ],
       "exclude_matches": [
         "https://www.youtube.com/audiolibrary/*",
@@ -52,7 +51,6 @@
         "js&css/extension/www.youtube.com/general/general.js",
         "js&css/extension/www.youtube.com/appearance/sidebar/sidebar.js",
         "js&css/extension/www.youtube.com/appearance/comments/comments.js",
-        "js&css/web-accessible/www.youtube.com/speed-controls.js",
         "js&css/extension/init.js"
       ],
       "matches": ["https://www.youtube.com/*"],
@@ -78,8 +76,8 @@
         "js&css/web-accessible/www.youtube.com/shortcuts.js",
         "js&css/web-accessible/www.youtube.com/blocklist.js",
         "js&css/web-accessible/www.youtube.com/settings.js",
+        "js&css/web-accessible/www.youtube.com/volume-booster.js",
         "js&css/web-accessible/www.youtube.com/last-watched-overlay.js",
-        "js&css/web-accessible/www.youtube.com/speed-controls.js",
         "js&css/web-accessible/init.js",
         "menu/icons/48.png"
       ],
