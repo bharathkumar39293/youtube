@@ -13,8 +13,7 @@ function createSpeedControls() {
     decreaseBtn.title = 'Decrease playback speed';
     decreaseBtn.innerHTML = `
         <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
-            <path d="M 12,24 20.5,18 12,12 V 24 z" fill="currentColor"></path>
-            <path d="M 22,12 v 12" stroke="currentColor" stroke-width="2"></path>
+            <path d="M 12,18 L 24,18" stroke="currentColor" stroke-width="3"></path>
         </svg>`;
     decreaseBtn.onclick = () => adjustSpeed('decrease');
     
@@ -22,7 +21,11 @@ function createSpeedControls() {
     const resetBtn = document.createElement('button');
     resetBtn.className = 'ytp-button ytp-speed-reset';
     resetBtn.title = 'Reset to normal speed (1x)';
-    resetBtn.innerHTML = '1x';
+    resetBtn.innerHTML = `
+        <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+            <rect x="12" y="12" width="4" height="12" fill="currentColor"></rect>
+            <rect x="20" y="12" width="4" height="12" fill="currentColor"></rect>
+        </svg>`;
     resetBtn.onclick = () => adjustSpeed('reset');
     
     // Create increase speed button
@@ -31,8 +34,8 @@ function createSpeedControls() {
     increaseBtn.title = 'Increase playback speed';
     increaseBtn.innerHTML = `
         <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
-            <path d="M 12,24 20.5,18 12,12 V 24 z" fill="currentColor"></path>
-            <path d="M 22,12 L 30.5,18 22,24 V 12 z" fill="currentColor"></path>
+            <path d="M 12,18 L 24,18" stroke="currentColor" stroke-width="3"></path>
+            <path d="M 18,12 L 18,24" stroke="currentColor" stroke-width="3"></path>
         </svg>`;
     increaseBtn.onclick = () => adjustSpeed('increase');
     

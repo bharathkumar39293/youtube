@@ -22,6 +22,15 @@
     width: 24px;
     height: 24px;
     margin: 0 2px;
+    opacity: 0.9;
+}
+
+.ytp-speed-controls button:hover svg {
+    opacity: 1;
+}
+
+.ytp-speed-controls .ytp-speed-reset svg {
+    transform: scale(0.8);
 }
 
 .ytp-speed-controls button:hover {
