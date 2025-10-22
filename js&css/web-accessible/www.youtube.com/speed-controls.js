@@ -11,7 +11,11 @@ function createSpeedControls() {
     const decreaseBtn = document.createElement('button');
     decreaseBtn.className = 'ytp-button ytp-speed-decrease';
     decreaseBtn.title = 'Decrease playback speed';
-    decreaseBtn.innerHTML = '&lt;';
+    decreaseBtn.innerHTML = `
+        <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+            <path d="M 12,24 20.5,18 12,12 V 24 z" fill="currentColor"></path>
+            <path d="M 22,12 v 12" stroke="currentColor" stroke-width="2"></path>
+        </svg>`;
     decreaseBtn.onclick = () => adjustSpeed('decrease');
     
     // Create reset speed button
@@ -25,7 +29,11 @@ function createSpeedControls() {
     const increaseBtn = document.createElement('button');
     increaseBtn.className = 'ytp-button ytp-speed-increase';
     increaseBtn.title = 'Increase playback speed';
-    increaseBtn.innerHTML = '&gt;';
+    increaseBtn.innerHTML = `
+        <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+            <path d="M 12,24 20.5,18 12,12 V 24 z" fill="currentColor"></path>
+            <path d="M 22,12 L 30.5,18 22,24 V 12 z" fill="currentColor"></path>
+        </svg>`;
     increaseBtn.onclick = () => adjustSpeed('increase');
     
     // Add buttons to controls
